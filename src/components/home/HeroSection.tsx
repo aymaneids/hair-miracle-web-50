@@ -8,7 +8,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30 z-10"></div>
         <img
           src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3"
-          alt="Skin care treatment"
+          alt="Medical spa treatment"
           className="w-full h-full object-cover"
         />
       </div>
@@ -16,15 +16,17 @@ const HeroSection = () => {
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <div className="max-w-2xl">
           <span className="inline-block text-white/80 text-sm font-medium px-3 py-1 border border-white/20 rounded-full mb-4 backdrop-blur-sm bg-white/10 animate-fade-in">
-            Service de soins de la peau
+            Santé/beauté
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            HAVILAND ALIVIA ESTHETICS
+            NOURISH MEDICAL SPA
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            Certified Advanced Esthetician✨<br />
-            LINKED Permanent Jewelry🔗<br />
-            Certified Acne Specialist
+            🧑‍⚕️ PA-C<br />
+            🌱 Natural Enhancement Specialist<br />
+            👄 Dermal Filler+Cosmetic+Therapeutic Botox<br />
+            ⚡️Medical Weight Loss<br />
+            💪🏼Testosterone Replacement
           </p>
           <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <Link

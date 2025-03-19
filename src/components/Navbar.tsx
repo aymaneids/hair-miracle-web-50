@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -74,7 +73,7 @@ const Navbar = () => {
                     ? 'text-salon-dark' 
                     : 'text-white'
               }`}>
-                TEGO<span className="text-salon-pink">NAIL SPA</span>
+                NOURISH<span className="text-salon-pink">MEDSPA</span>
               </span>
             </Link>
           </div>
