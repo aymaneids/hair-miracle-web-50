@@ -1,10 +1,11 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Calendar, CalendarCheck, ExternalLink, Clock, Scissors, Phone } from 'lucide-react';
+import { Calendar as CalendarIcon, CalendarCheck, ExternalLink, Clock, Scissors, Phone } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { BookingForm } from '../components/booking/BookingForm';
 
 const BookNow = () => {
   const { toast } = useToast();
@@ -35,68 +36,65 @@ const BookNow = () => {
               Book Your Appointment
             </h1>
             <p className="text-lg text-salon-dark/80 max-w-2xl mx-auto">
-              Schedule your next nail transformation with TEGO NAIL SPA and experience beauty services at their finest.
+              Schedule your next skin care appointment with Haviland Alivia Esthetics and experience beauty services at their finest.
             </p>
           </div>
 
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div className="p-8 md:p-10">
-              <div className="grid md:grid-cols-2 gap-10">
-                <div>
-                  <h2 className="text-xl font-serif font-semibold text-salon-dark mb-4 flex items-center">
-                    <Calendar className="mr-2 text-salon-pink" size={20} />
-                    Booking Information
-                  </h2>
-                  
-                  <ul className="space-y-4 mb-6">
-                    <li className="flex items-start">
-                      <span className="bg-salon-light text-salon-pink p-1 rounded-full mr-3 mt-0.5">
-                        <Phone size={16} />
-                      </span>
-                      <span className="text-salon-dark/80">
-                        <strong>Phone Booking:</strong> For the best service, we recommend booking by phone at (773) 252-4444.
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="bg-salon-light text-salon-pink p-1 rounded-full mr-3 mt-0.5">
-                        <Clock size={16} />
-                      </span>
-                      <span className="text-salon-dark/80">
-                        <strong>Business Hours:</strong> Mon-Fri: 9am - 7pm, Sat: 9am - 5pm, Sun: Closed
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="bg-salon-light text-salon-pink p-1 rounded-full mr-3 mt-0.5">
-                        <Scissors size={16} />
-                      </span>
-                      <span className="text-salon-dark/80">
-                        <strong>Services Available:</strong> No chip, dip, nail art, acrylics, and manicure & pedicure services
-                      </span>
-                    </li>
-                  </ul>
-                </div>
+          <div className="grid md:grid-cols-2 gap-8 mb-10">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="p-8">
+                <h2 className="text-xl font-serif font-semibold text-salon-dark mb-4 flex items-center">
+                  <Calendar className="mr-2 text-salon-pink" size={20} />
+                  Booking Information
+                </h2>
                 
-                <div className="flex flex-col justify-center items-center bg-salon-light p-8 rounded-lg">
-                  <h3 className="text-xl font-serif font-semibold text-salon-dark mb-6 text-center">
-                    Ready to Book Your Appointment?
-                  </h3>
+                <ul className="space-y-4 mb-6">
+                  <li className="flex items-start">
+                    <span className="bg-salon-light text-salon-pink p-1 rounded-full mr-3 mt-0.5">
+                      <Phone size={16} />
+                    </span>
+                    <span className="text-salon-dark/80">
+                      <strong>Phone Booking:</strong> For the best service, we recommend booking by phone at (773) 252-4444.
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="bg-salon-light text-salon-pink p-1 rounded-full mr-3 mt-0.5">
+                      <Clock size={16} />
+                    </span>
+                    <span className="text-salon-dark/80">
+                      <strong>Business Hours:</strong> Mon-Fri: 9am - 7pm, Sat: 9am - 5pm, Sun: Closed
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="bg-salon-light text-salon-pink p-1 rounded-full mr-3 mt-0.5">
+                      <Scissors size={16} />
+                    </span>
+                    <span className="text-salon-dark/80">
+                      <strong>Services Available:</strong> Advanced skin care, permanent jewelry, acne treatments
+                    </span>
+                  </li>
+                </ul>
+
+                <div className="mt-6">
                   <Button 
                     onClick={handleExternalBooking}
                     disabled={redirecting}
-                    className="bg-salon-pink hover:bg-salon-pink/90 text-white py-6 px-6 rounded-md w-full max-w-xs flex items-center justify-center text-lg"
+                    className="bg-salon-pink hover:bg-salon-pink/90 text-white py-6 px-6 rounded-md w-full flex items-center justify-center text-lg"
                   >
                     {redirecting ? 'Redirecting...' : 'Call To Book Now'}
                     <Phone className="ml-2" size={18} />
                   </Button>
-                  <p className="text-sm text-salon-dark/60 mt-4 text-center">
-                    Call (773) 252-4444 for appointments
+                  <p className="text-sm text-salon-dark/60 mt-2 text-center">
+                    Call (773) 252-4444 for immediate appointments
                   </p>
                 </div>
               </div>
             </div>
+
+            <BookingForm />
           </div>
 
-          <div className="mt-10 bg-white rounded-xl shadow-lg overflow-hidden">
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
             <div className="p-8">
               <h2 className="text-xl font-serif font-semibold text-salon-dark mb-4">
                 Booking FAQ
