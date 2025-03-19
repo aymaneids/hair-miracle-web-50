@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Calendar as CalendarIcon, CalendarCheck, ExternalLink, Clock, Scissors, Phone } from 'lucide-react';
+import { Calendar, CalendarCheck, ExternalLink, Clock, Scissors, Phone } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
