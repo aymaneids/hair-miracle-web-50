@@ -11,9 +11,10 @@ const Navbar = () => {
   const isAboutPage = location.pathname === '/about';
   const isServicesPage = location.pathname === '/services';
   const isGalleryPage = location.pathname === '/gallery';
+  const isBookNowPage = location.pathname === '/book-now';
   
   // Check if the current page should have gray navbar
-  const isGrayNavbar = isAboutPage || isServicesPage || isGalleryPage;
+  const isGrayNavbar = isAboutPage || isServicesPage || isGalleryPage || isBookNowPage;
 
   const handleScroll = () => {
     const offset = window.scrollY;
